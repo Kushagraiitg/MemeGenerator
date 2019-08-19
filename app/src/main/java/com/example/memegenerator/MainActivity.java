@@ -1,5 +1,7 @@
 package com.example.memegenerator;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,7 +9,7 @@ import android.view.MenuItem;
 
 
 
-public class MainActivity extends AppCompatActivity implements TopSectionF.TopSectionListener {
+public class MainActivity extends FragmentActivity implements TopSectionF.TopSectionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
