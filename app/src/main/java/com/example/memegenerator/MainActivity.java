@@ -17,7 +17,7 @@ public class MainActivity extends FragmentActivity implements TopSectionF.TopSec
         setContentView(R.layout.activity_main);
     }
 
-    //This code called by the Top Fragment called when the user clicked the button
+    
     @Override
     public void createClick(String top, String bottom) {
         BottomPictureF bottomFragment = (BottomPictureF)getSupportFragmentManager().findFragmentById(R.id.fragment2);
