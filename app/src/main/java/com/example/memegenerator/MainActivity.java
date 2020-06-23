@@ -1,5 +1,6 @@
 package com.example.memegenerator;
 
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -17,11 +18,11 @@ public class MainActivity extends FragmentActivity implements TopSectionF.TopSec
         setContentView(R.layout.activity_main);
     }
 
-    
+
     @Override
-    public void createClick(String top, String bottom) {
+    public void createClick(String top, String bottom, Uri imageUri) {
         BottomPictureF bottomFragment = (BottomPictureF)getSupportFragmentManager().findFragmentById(R.id.fragment2);
-        bottomFragment.setClickedText(top, bottom);
+        bottomFragment.setClickedText(top, bottom, imageUri);
     }
 
 
