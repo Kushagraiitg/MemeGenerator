@@ -15,6 +15,8 @@ import android.app.Activity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 
 public class TopSectionF extends Fragment {
@@ -27,9 +29,9 @@ public class TopSectionF extends Fragment {
     private static final int GENERATE = 2;
     Uri imageUri;
     TopSectionListener activityCommander;
-
+    private String clr="Black";
     public interface TopSectionListener{
-        public void createClick(String top, String bottom,Uri imageUri);
+        public void createClick(String top, String bottom,Uri imageUri,String clr1);
     }
     @Override
     public void onAttach(Context context) {
@@ -54,6 +56,74 @@ public class TopSectionF extends Fragment {
 
         final Button generateButton = (Button)view.findViewById(R.id.button);
         final Button SelectPic = (Button)view.findViewById (R.id.SelectP);
+        final RadioGroup rGroup = (RadioGroup)view.findViewById(R.id.radioGroup);
+        final RadioButton RadioButton1 = (RadioButton)rGroup.findViewById(R.id.radioButton1);
+        RadioButton1.setOnClickListener ( new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+
+
+                System.out.println ( "Kuch hua hai, dekho zara" );
+                clr=RadioButton1.getText().toString ();
+
+
+            }
+        } );
+        final RadioButton RadioButton2 = (RadioButton)rGroup.findViewById(R.id.radioButton2);
+        RadioButton2.setOnClickListener ( new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+
+
+                System.out.println ( "Kuch hua hai, dekho zara" );
+                clr=RadioButton2.getText().toString ();
+
+
+            }
+        } );
+        final RadioButton RadioButton3 = (RadioButton)rGroup.findViewById(R.id.radioButton3);
+        RadioButton3.setOnClickListener ( new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+
+
+                System.out.println ( "Kuch hua hai, dekho zara" );
+                clr=RadioButton3.getText().toString ();
+
+
+            }
+        } );
+        final RadioButton RadioButton4 = (RadioButton)rGroup.findViewById(R.id.radioButton4);
+        RadioButton4.setOnClickListener ( new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+
+
+                System.out.println ( "Kuch hua hai, dekho zara" );
+                clr=RadioButton4.getText().toString ();
+
+
+            }
+        } );
+
+
+        /*
+        // This will get the radiogroup
+        RadioGroup rGroup = (RadioGroup)view.findViewById(R.id.radioGroup);
+        // This will get the radiobutton in the radiogroup that is checked
+        RadioButton checkedRadioButton = (RadioButton)rGroup.findViewById(rGroup.getCheckedRadioButtonId());
+
+
+        clr=checkedRadioButton.getText().toString ();
+        */
         SelectPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +142,7 @@ public class TopSectionF extends Fragment {
 
                     @Override
                     public void onClick(View v) {
+
                         buttonClicked(v);
 
                     }
@@ -84,7 +155,7 @@ public class TopSectionF extends Fragment {
     //Calls this when button clicked
     public void buttonClicked(View view){
 
-        activityCommander.createClick(etTopTextInput.getText().toString(), etBottomTextInput.getText().toString(), imageUri);
+        activityCommander.createClick(etTopTextInput.getText().toString(), etBottomTextInput.getText().toString(), imageUri,clr);
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -20,9 +20,9 @@ public class MainActivity extends FragmentActivity implements TopSectionF.TopSec
 
 
     @Override
-    public void createClick(String top, String bottom, Uri imageUri) {
+    public void createClick(String top, String bottom, Uri imageUri, String clr) {
         BottomPictureF bottomFragment = (BottomPictureF)getSupportFragmentManager().findFragmentById(R.id.fragment2);
-        bottomFragment.setClickedText(top, bottom, imageUri);
+        bottomFragment.setClickedText(top, bottom, imageUri,clr);
     }
 
 

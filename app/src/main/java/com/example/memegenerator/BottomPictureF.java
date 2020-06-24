@@ -1,6 +1,7 @@
 package com.example.memegenerator;
 
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 
 
 public class BottomPictureF extends Fragment {
@@ -34,10 +36,25 @@ public class BottomPictureF extends Fragment {
         return view;
     }
 
-    public void setClickedText(String top, String bottom, Uri imageUri) {
+    public void setClickedText(String top, String bottom, Uri imageUri, String clr) {
 
         txtTop.setText ( top );
+        HashMap<String, String> map=new HashMap<String, String> (  );
+        /*<color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Red">#EB226B</color>
+    <color name="Blue">	#000080</color>*/
+        map.put ( "Black","#000000" );
+        map.put ( "White","#FFFFFF" );
+        map.put ( "Red","#EB226B" );
+        map.put ( "Blue","#000080" );
+
+        int str=Color.parseColor (map.get ( clr ));
+
+
+        txtTop.setTextColor ( str  );
         txtBottom.setText ( bottom );
+        txtBottom.setTextColor ( str );
         try{
             Bitmap bitmap=MediaStore.Images.Media.getBitmap ( getContext ().getContentResolver (),imageUri );
             img.setImageBitmap ( bitmap );
