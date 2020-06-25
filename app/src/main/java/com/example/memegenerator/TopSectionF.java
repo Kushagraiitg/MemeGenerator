@@ -30,8 +30,9 @@ public class TopSectionF extends Fragment {
     Uri imageUri;
     TopSectionListener activityCommander;
     private String clr="Black";
+    private String clr2="Black";
     public interface TopSectionListener{
-        public void createClick(String top, String bottom,Uri imageUri,String clr1);
+        public void createClick(String top, String bottom,Uri imageUri,String clr1,String clr12);
     }
     @Override
     public void onAttach(Context context) {
@@ -66,6 +67,7 @@ public class TopSectionF extends Fragment {
 
 
                 System.out.println ( "Kuch hua hai, dekho zara" );
+                clr2=clr;
                 clr=RadioButton1.getText().toString ();
 
 
@@ -80,6 +82,7 @@ public class TopSectionF extends Fragment {
 
 
                 System.out.println ( "Kuch hua hai, dekho zara" );
+                clr2=clr;
                 clr=RadioButton2.getText().toString ();
 
 
@@ -94,6 +97,7 @@ public class TopSectionF extends Fragment {
 
 
                 System.out.println ( "Kuch hua hai, dekho zara" );
+                clr2=clr;
                 clr=RadioButton3.getText().toString ();
 
 
@@ -108,6 +112,7 @@ public class TopSectionF extends Fragment {
 
 
                 System.out.println ( "Kuch hua hai, dekho zara" );
+                clr2=clr;
                 clr=RadioButton4.getText().toString ();
 
 
@@ -155,7 +160,7 @@ public class TopSectionF extends Fragment {
     //Calls this when button clicked
     public void buttonClicked(View view){
 
-        activityCommander.createClick(etTopTextInput.getText().toString(), etBottomTextInput.getText().toString(), imageUri,clr);
+        activityCommander.createClick(etTopTextInput.getText().toString(), etBottomTextInput.getText().toString(), imageUri,clr,clr2);
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -7,13 +7,13 @@
 
     <EditText
         android:id="@+id/TopText"
-        android:layout_width="360dp"
+        android:layout_width="348dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Top Line"
+        android:text="Enter  Top text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,14 +21,15 @@
 
     <EditText
         android:id="@+id/BottomText"
-        android:layout_width="349dp"
-        android:layout_height="49dp"
+        android:layout_width="348dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Bottom Line"
+        android:text="Enter Bottom Text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TopText" />
 

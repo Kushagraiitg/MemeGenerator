@@ -36,7 +36,7 @@ public class BottomPictureF extends Fragment {
         return view;
     }
 
-    public void setClickedText(String top, String bottom, Uri imageUri, String clr) {
+    public void setClickedText(String top, String bottom, Uri imageUri, String clr,String clr2) {
 
         txtTop.setText ( top );
         HashMap<String, String> map=new HashMap<String, String> (  );
@@ -50,9 +50,10 @@ public class BottomPictureF extends Fragment {
         map.put ( "Blue","#000080" );
 
         int str=Color.parseColor (map.get ( clr ));
+        int str2=Color.parseColor (map.get ( clr2 ));
 
 
-        txtTop.setTextColor ( str  );
+        txtTop.setTextColor ( str2  );
         txtBottom.setText ( bottom );
         txtBottom.setTextColor ( str );
         try{
