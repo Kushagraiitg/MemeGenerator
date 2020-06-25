@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:configChanges="orientation"
+    android:screenOrientation="portrait">
 
     <fragment
         android:id="@+id/fragment"
         android:name="com.example.memegenerator.TopSectionF"
-        android:layout_width="383dp"
-        android:layout_height="218dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
@@ -25,8 +27,8 @@
     <fragment
         android:id="@+id/fragment2"
         android:name="com.example.memegenerator.BottomPictureF"
-        android:layout_width="359dp"
-        android:layout_height="477dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
