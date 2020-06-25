@@ -1,2 +1,3 @@
 # MemeGenerator
-The following Java based application merges pictures with text to create interesting memes.
+# Kushagra Pandey
+To try the app, download the "app-debug" apk file 
