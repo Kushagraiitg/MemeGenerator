@@ -166,7 +166,10 @@ public class TopSectionF extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-
+        if(data==null){
+            imageUri= Uri.parse("MemeGenerator\\app\\src\\main\\res\\drawable\\messed.png");
+        }
+        else
         imageUri = data.getData();
 
 

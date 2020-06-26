@@ -61,7 +61,7 @@ public class BottomPictureF extends Fragment {
             img.setImageBitmap ( bitmap );
         }
         catch(IOException e){
-
+            img.setImageDrawable ( getResources().getDrawable(R.drawable.messed) );
         }
         catch(NullPointerException e){
             img.setImageDrawable ( getResources().getDrawable(R.drawable.messed) );
